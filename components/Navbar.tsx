@@ -67,7 +67,7 @@ function Navbar() {
   };
 
   return (
-    <div className="relative ">
+    <div className="relative bg-secondary px-4 md:px-0 lg:px-0">
       <div className="w-full h-[91px] lg:sticky flex justify-between items-center px-4 sm:px-8 lg:px-52  bg-secondary mx-auto">
         <div>
           <Link href="/" className="text-3xl font-bold">
@@ -97,10 +97,10 @@ function Navbar() {
 
       {/* Mobile View DIV */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-[91px] left-0 w-full bg-secondary py-4 px-4 z-50">
-          <div className="flex flex-col gap-4">
+        <div className="md:hidden absolute top-[91px] left-0 w-full border-b-2 border-neutral pb-12 bg-secondary py-4 px-4 z-50">
+          <div className="flex flex-col items-center  gap-4">
             {navlinks.map((link, idx) => (
-              <Link href={link.href} key={idx}>{link.name}</Link>
+              <Link className="hover:text-primary" href={link.href} key={idx}>{link.name}</Link>
             ))}
           </div>
           <div className="flex flex-col gap-4 mt-4">
