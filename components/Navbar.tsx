@@ -1,52 +1,3 @@
-// import { link } from "fs"
-// import Link from "next/link"
-// import { FaArrowRight } from "react-icons/fa6";
-
-// const navlinks = [
-//   {
-//     name: "Home",
-//     href: "/"
-//   },
-//   {
-//     name: "products",
-//     href: '/'
-//   },
-//   {
-//     name: "pricing",
-//     href: '/'
-//   },
-//   {
-//     name: "contact",
-//     href: '/'
-//   }
-// ]
-
-// function Navbar() {
-//   return (
-//     <div>
-//       <div className="w-screen h-[91px] flex justify-between items-center px-52 bg-secondary mx-auto">
-//         <div>
-//           <Link href="/" className="text-3xl font-bold">Quovr</Link>
-//         </div>
-
-//         <ul className="flex gap-8 pr-20">
-//           {navlinks.map((link, idx) => (
-//             <li key={idx}>{link.name}</li>
-//           ))}
-//         </ul>
-
-//         <div className="flex gap-x-8 items-center justify-center pr-16">
-//           <button className="btn bg-transparent border-none shadow-none text-primary">Login</button>
-//           <button className="btn bg-primary text-white py-[15px] px-[25px]   flex items-center gap-x-4">Join us <FaArrowRight /></button>
-//         </div>
-//       </div>
-
-//     </div>
-//   )
-// }
-
-// export default Navbar
-
 'use client'
 import { useState } from "react";
 import Link from "next/link";
@@ -67,7 +18,7 @@ function Navbar() {
   };
 
   return (
-    <div className="relative bg-secondary px-4 md:px-0 lg:px-0">
+    <div className="relative bg-secondary px-4   md:px-0 lg:px-0">
       <div className="w-full h-[91px] lg:sticky flex justify-between items-center px-4 sm:px-8 lg:px-52  bg-secondary mx-auto">
         <div>
           <Link href="/" className="text-3xl font-bold">

@@ -1,19 +1,17 @@
 'use client';
 
-import React, { useRef } from 'react';
+import React from 'react';
 import Image from "next/image";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
-import type { Swiper as SwiperType } from 'swiper';
+
+
 
 import 'swiper/css';
 import 'swiper/css/pagination';
-import 'swiper/css/navigation';
 
 const GetQualityEducation = () => {
-  const swiperRef = useRef<SwiperType | null>(null);
-
   const carouselData = [
     {
       pic: "/user-cover-1.png",
@@ -47,30 +45,32 @@ const GetQualityEducation = () => {
         </p>
       </div>
 
-      {/* add carousel below */}
       <div className="px-4 lg:px-28 mt-8 lg:mt-32">
         <Swiper
-          onSwiper={(swiper) => {
-            swiperRef.current = swiper;
-          }}
           slidesPerView={1}
-          spaceBetween={20}
-          centeredSlides={true}
+          spaceBetween={10}
           pagination={{
-            type: 'fraction',
+            clickable: true,
           }}
-          navigation={true}
-          modules={[Pagination, Navigation]}
           breakpoints={{
-            640: {
+            '@0.00': {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            '@0.75': {
               slidesPerView: 2,
               spaceBetween: 20,
             },
-            768: {
+            '@1.00': {
               slidesPerView: 3,
-              spaceBetween: 30,
+              spaceBetween: 40,
+            },
+            '@1.50': {
+              slidesPerView: 4,
+              spaceBetween: 50,
             },
           }}
+          modules={[Pagination]}
           className="mySwiper"
         >
           {carouselData.map((item, idx) => (
